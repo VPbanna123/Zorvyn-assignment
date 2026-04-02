@@ -39,25 +39,25 @@ function WorkspacePanel({
 
         <article className="rounded-xl border border-slate-200 bg-slate-50 p-4 md:col-span-2">
           <p className="text-sm font-medium text-slate-700">Quick actions</p>
-          <div className="mt-3 flex flex-wrap gap-2">
+          <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2 md:flex md:flex-wrap">
             <button
               type="button"
               onClick={onReset}
-              className="rounded-lg bg-slate-900 px-3 py-2 text-sm font-semibold text-white transition hover:bg-slate-700"
+              className="w-full rounded-lg bg-slate-900 px-3 py-2 text-sm font-semibold text-white transition hover:bg-slate-700 md:w-auto"
             >
               Reset Demo Data
             </button>
             <button
               type="button"
               onClick={onExportJson}
-              className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
+              className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 md:w-auto"
             >
               Export JSON
             </button>
             <button
               type="button"
               onClick={onExportCsv}
-              className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
+              className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 md:w-auto"
             >
               Export CSV
             </button>
@@ -65,14 +65,14 @@ function WorkspacePanel({
               type="button"
               onClick={onSyncMockApi}
               disabled={syncStatus === 'syncing'}
-              className="rounded-lg border border-cyan-300 bg-cyan-50 px-3 py-2 text-sm font-semibold text-cyan-700 transition hover:bg-cyan-100 disabled:cursor-not-allowed disabled:opacity-60"
+              className="w-full rounded-lg border border-cyan-300 bg-cyan-50 px-3 py-2 text-sm font-semibold text-cyan-700 transition hover:bg-cyan-100 disabled:cursor-not-allowed disabled:opacity-60 md:w-auto"
             >
               {syncStatus === 'syncing' ? 'Syncing...' : 'Sync Mock API'}
             </button>
             <button
               type="button"
               onClick={onClear}
-              className="rounded-lg border border-rose-300 bg-rose-50 px-3 py-2 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
+              className="w-full rounded-lg border border-rose-300 bg-rose-50 px-3 py-2 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 md:w-auto"
             >
               Clear All
             </button>
